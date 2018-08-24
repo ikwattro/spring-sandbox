@@ -17,7 +17,6 @@ public class SimpleTest extends AbstractControllerTest {
     public void testSendRequestWithBody() {
         AnalyzeRequest request = new AnalyzeRequest("some content");
         ResponseEntity<AnalyzeRequest> response = restTemplate.postForEntity(urlFor("api/analyze"), request, AnalyzeRequest.class);
-
         assertEquals(200, response.getStatusCodeValue());
         assertEquals("some content", response.getBody().getBody());
     }

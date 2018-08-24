@@ -12,7 +12,7 @@ public class SimpleController {
         return "Hello";
     }
 
-    @RequestMapping(path = "/api/analyze", method = RequestMethod.POST)
+    @PostMapping(path = "/api/analyze")
     @ResponseBody
     public AnalyzeRequest analyze(@RequestBody AnalyzeRequest request) {
         return request;
